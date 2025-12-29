@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation-name: scrollUp;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.column img {
+  width: 150px;
+  border-radius: 120px;
+  height: 500vh;
+}
+.img-wrap {
+  width: 150px;
+  height: 280px;
+  border-radius: 120px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slow {
+  animation-duration: 6s;
+}
+
+.medium {
+  animation-duration: 5s;
+}
+
+.fast {
+  animation-duration: 4s;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
